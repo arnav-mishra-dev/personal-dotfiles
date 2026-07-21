@@ -85,6 +85,19 @@ vim.diagnostic.config({
   },
 })
 
+vim.o.complete = '.,o'
+vim.opt.completeopt = "fuzzy,menuone,noselect,popup"
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('my.lsp', {}),
+  callback = function(ev)
+    local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
+
+    if client:supports_method('textDocument/completion') then
+      vim.lsp.completion.enable(true, client.id, ev.buf, {autotrigger = true})
+    end
+  end,
+})
+
 require('smear_cursor').setup({
     smear_between_buffers = true,
     smear_between_neighbor_lines = true,

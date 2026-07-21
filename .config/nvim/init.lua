@@ -1,4 +1,4 @@
-require("config.plugins")
-require("config.options")
-require("config.keymaps")
+require("plugins")
+require("options")
+require("keymaps")
 require("lsps")
