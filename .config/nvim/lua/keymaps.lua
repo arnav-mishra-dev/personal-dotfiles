@@ -10,7 +10,10 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {
     desc = 'Open diagnostic message'
 })
 
-vim.keymap.set('n', '<leader>t', function() os.execute('foot & disown') end, {
+vim.keymap.set('n', '<leader>t',
+    function()
+	vim.fn.jobstart('foot', { cwd = vim.fn.expand('%:p:h') })
+    end, {
     desc = 'Open diagnostic message'
 })
 
