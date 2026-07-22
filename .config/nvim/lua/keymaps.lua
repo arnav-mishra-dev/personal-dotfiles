@@ -10,9 +10,14 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {
     desc = 'Open diagnostic message'
 })
 
+vim.keymap.set('n', '<leader>t', function() os.execute('foot & disown') end, {
+    desc = 'Open diagnostic message'
+})
+
 vim.keymap.set('n', '<leader>ff', MiniPick.builtin.files, {
     desc = 'Open file picker'
 })
+
 vim.keymap.set('n', '<leader>fb', MiniPick.builtin.buffers, {
     desc = 'Open buffer picker'
 })
