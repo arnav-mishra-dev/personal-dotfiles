@@ -14,6 +14,7 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = { '<filetype>' },
   callback = function() vim.treesitter.start() end,
 })
+
 vim.pack.add{
   { src = 'https://github.com/sphamba/smear-cursor.nvim' },
   { src = 'https://github.com/mfussenegger/nvim-jdtls' },
@@ -21,6 +22,13 @@ vim.pack.add{
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
   { src = 'https://github.com/nyoom-engineering/oxocarbon.nvim' },
 }
+
 require('mini.pick').setup()
+MiniPick.registry.files_fd = function()
+  local command = { 'fd', '--type=f', '--no-follow', '--color=never', '--hidden' }
+  return MiniPick.builtin.cli({ command = command })
+end
+
 vim.cmd("colorscheme oxocarbon")
+
 require('nvim-treesitter').install { 'lua', 'c', 'java' }

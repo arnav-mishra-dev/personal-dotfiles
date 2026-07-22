@@ -14,7 +14,7 @@ vim.keymap.set('n', '<leader>t', function() os.execute('foot & disown') end, {
     desc = 'Open diagnostic message'
 })
 
-vim.keymap.set('n', '<leader>ff', MiniPick.builtin.files, {
+vim.keymap.set('n', '<leader>ff', function() vim.cmd('Pick files_fd') end, {
     desc = 'Open file picker'
 })
 
