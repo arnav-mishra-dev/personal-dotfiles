@@ -10,15 +10,27 @@ vim.api.nvim_create_autocmd('PackChanged', {
     end
   end,
 })
+
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { '<filetype>' },
   callback = function() vim.treesitter.start() end,
+})
+
+vim.g.loaded_netrwPlugin = 1
+vim.api.nvim_create_autocmd("UIEnter", {
+  callback = function()
+    require("yazi").setup({
+      open_for_directories = true,
+    })
+  end,
 })
 
 vim.pack.add{
   { src = 'https://github.com/sphamba/smear-cursor.nvim' },
   { src = 'https://github.com/mfussenegger/nvim-jdtls' },
   { src = 'https://github.com/nvim-mini/mini.pick' },
+  { src = 'https://github.com/nvim-lua/plenary.nvim' },
+  { src = 'https://github.com/mikavilpas/yazi.nvim' },
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
   { src = 'https://github.com/nyoom-engineering/oxocarbon.nvim' },
 }

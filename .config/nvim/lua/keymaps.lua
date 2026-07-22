@@ -21,3 +21,7 @@ vim.keymap.set('n', '<leader>ff', function() vim.cmd('Pick files_fd') end, {
 vim.keymap.set('n', '<leader>fb', MiniPick.builtin.buffers, {
     desc = 'Open buffer picker'
 })
+
+vim.keymap.set('n', '<leader>-', require('yazi').yazi, {
+    desc = 'Toggle yazi at current file'
+})
