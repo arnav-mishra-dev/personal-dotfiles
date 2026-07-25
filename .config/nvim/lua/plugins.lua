@@ -43,4 +43,4 @@ end
 
 vim.cmd("colorscheme oxocarbon")
 
-require('nvim-treesitter').install { 'lua', 'c', 'java' }
+require('nvim-treesitter').install { 'lua', 'c', 'java', 'python' }
