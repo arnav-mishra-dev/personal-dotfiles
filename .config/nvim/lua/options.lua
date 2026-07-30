@@ -26,11 +26,10 @@ vim.opt.mouse = 'a'
 --  See `:help 'clipboard'`
 vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
 
--- Enable break indent
 vim.opt.breakindent = true
-
--- Stop text wrapping
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.breakat = " ^I!@*-+;:,./?{}"
+vim.opt.linebreak = true
 
 -- Enable undo/redo changes even after closing and reopening a file
 vim.opt.undofile = true
