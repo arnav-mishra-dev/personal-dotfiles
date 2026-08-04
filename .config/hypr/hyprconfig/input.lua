@@ -15,7 +15,6 @@ hl.config({
         follow_mouse = 1,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
-	scroll_method = "on_button_down",
         touchpad = {
             natural_scroll = true,
         },
