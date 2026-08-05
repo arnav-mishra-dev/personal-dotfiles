@@ -45,7 +45,7 @@
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "󰖪",
         "max-length": 50,
-        "on-click": "exec foot --title=impala -e impala"
+        "on-click": "exec foot --title=wlctl -e wlctl"
     },
     "clock": {
       "format": "󰥔 {:%a, %d. %b %I:%M %p}",
