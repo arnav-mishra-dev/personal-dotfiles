@@ -43,7 +43,7 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(vars.browser))
 hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(vars.menu))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -f hex -n"))
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region -z -t 500 -f $(date +'screenshot_%d%m%H%M%S.png') -o /home/arnav/Pictures/Screenshots"))
+hl.bind("PRINT", hl.dsp.exec_cmd("grimblast --freeze copysave area ~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).png"))
 hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit"))    -- dwindle only
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + h",  hl.dsp.focus({ direction = "left" }))
