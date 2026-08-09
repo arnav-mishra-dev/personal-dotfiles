@@ -38,9 +38,10 @@ vim.pack.add{
   { src = 'https://github.com/nvim-mini/mini.diff' },
   { src = 'https://github.com/nvim-mini/mini-git' },
   { src = 'https://github.com/nvim-mini/mini.statusline' },
+  { src = 'https://github.com/neovim/nvim-lspconfig' },
 }
 
-require('nvim-treesitter').install { 'lua', 'c', 'java', 'python' }
+require('nvim-treesitter').install { 'lua', 'c', 'java', 'python', 'rust', }
 
 require('mini.icons').setup()
 require('mini.pick').setup()
