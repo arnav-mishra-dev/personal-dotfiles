@@ -86,6 +86,8 @@ vim.diagnostic.config({
 
 vim.o.complete = '.,o'
 vim.opt.completeopt = "fuzzy,menuone,noselect,popup"
+vim.o.pumheight = 7
+vim.o.pummaxwidth = 30
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('my.lsp', {}),
   callback = function(ev)

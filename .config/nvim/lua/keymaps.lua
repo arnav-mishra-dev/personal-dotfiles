@@ -17,6 +17,15 @@ vim.keymap.set('n', '<leader>t',
     desc = 'Open diagnostic message'
 })
 
+MiniPick.registry.files_fd = function()
+  local command = { 'fd', '--type=f', '--no-follow', '--color=never', '--hidden' }
+  local show_with_icons = function(buf_id, items, query)
+    return MiniPick.default_show(buf_id, items, query, { show_icons = true })
+  end
+  local source = { name = 'Files fd', show = show_with_icons }
+  return MiniPick.builtin.cli({ command = command }, { source = source })
+end
+
 vim.keymap.set('n', '<leader>ff', function() vim.cmd('Pick files_fd') end, {
     desc = 'Open file picker'
 })
@@ -25,6 +34,7 @@ vim.keymap.set('n', '<leader>fb', MiniPick.builtin.buffers, {
     desc = 'Open buffer picker'
 })
 
-vim.keymap.set('n', '<leader>-', require('yazi').yazi, {
-    desc = 'Toggle yazi at current file'
+vim.keymap.set('n', '<leader>-', function() vim.cmd('10split +Oil') end, {
+    desc = 'Open file explorer'
 })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
