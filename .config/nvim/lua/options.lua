@@ -31,6 +31,10 @@ vim.opt.wrap = true
 vim.opt.breakat = " ^I!@*-+;:,./?{}"
 vim.opt.linebreak = true
 
+-- Disables automatic command wrapping
+vim.cmd('autocmd BufEnter * set formatoptions-=cro')
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=cro')
+
 -- Enable undo/redo changes even after closing and reopening a file
 vim.opt.undofile = true
 
