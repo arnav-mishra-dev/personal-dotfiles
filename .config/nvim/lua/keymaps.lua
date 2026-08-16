@@ -37,4 +37,3 @@ vim.keymap.set('n', '<leader>fb', MiniPick.builtin.buffers, {
 vim.keymap.set('n', '<leader>-', function() vim.cmd('Oil') end, {
     desc = 'Open file explorer'
 })
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
