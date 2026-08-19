@@ -31,8 +31,15 @@ vim.pack.add{
 }
 
 require('nvim-treesitter').install { 'lua', 'c', 'java', 'python', 'rust', }
+require("oil").setup({
+  columns = {
+    "icon",
+    "permissions",
+    -- "size",
+    -- "mtime",
+  },
+})
 
-require("oil").setup()
 require('mini.icons').setup()
 require('mini.pick').setup()
 require('mini.diff').setup()
