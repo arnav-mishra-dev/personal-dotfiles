@@ -1,5 +1,13 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('n', '<leader>.', function() vim.cmd('bnext') end, {
+    desc = 'Open file explorer'
+})
+
+vim.keymap.set('n', '<leader>,', function() vim.cmd('bprev') end, {
+    desc = 'Open file explorer'
+})
+
 vim.api.nvim_create_autocmd('TextYankPost', {
     desc = 'Highlight when yanking (copying) text',
     group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
