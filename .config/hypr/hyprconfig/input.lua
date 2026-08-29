@@ -36,15 +36,16 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("~/.config/fuzzel/power-menu.sh"))
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(vars.terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(vars.terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(vars.fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(vars.browser))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("neovide"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(vars.menu))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -f hex -n"))
 hl.bind("PRINT", hl.dsp.exec_cmd("grimblast --freeze --notify copysave area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png"))
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("grimblast --freeze --notify copysave output ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png"))
+hl.bind("PRINT", hl.dsp.exec_cmd("grimblast --freeze --notify copysave output ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png"))
 hl.bind(mainMod .. " + S", hl.dsp.layout("togglesplit"))    -- dwindle only
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + h",  hl.dsp.focus({ direction = "left" }))
