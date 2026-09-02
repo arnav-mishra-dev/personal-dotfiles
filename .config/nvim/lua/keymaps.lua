@@ -20,7 +20,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {
 
 vim.keymap.set('n', '<leader>t',
     function()
-	vim.fn.jobstart('foot', { cwd = vim.fn.expand('%:p:h') })
+	vim.fn.jobstart('foot', { cwd = vim.fn.getcwd() })
     end, {
     desc = 'Open diagnostic message'
 })

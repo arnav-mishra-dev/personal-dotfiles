@@ -11,3 +11,7 @@ PS1='[\u@\h \W]\$ '
 source "$HOME/.cargo/env"
 export EDITOR=nvim
 export VISUAL=neovide
+
+function nvide() {
+	neovide "$1" & disown
+}
