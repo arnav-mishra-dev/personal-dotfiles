@@ -20,6 +20,7 @@ vim.opt.relativenumber = true
 
 -- Tab width
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
