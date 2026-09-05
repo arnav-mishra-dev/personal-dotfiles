@@ -18,14 +18,15 @@ vim.api.nvim_create_autocmd('FileType', {
 
 vim.g.loaded_netrwPlugin = 1
 vim.pack.add{
-  { src = 'https://github.com/mfussenegger/nvim-jdtls' },
+  { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/nyoom-engineering/oxocarbon.nvim' },
+  { src = 'https://github.com/mfussenegger/nvim-jdtls' },
   { src = 'https://github.com/nvim-mini/mini.pick' },
   { src = 'https://github.com/nvim-mini/mini.icons' },
   { src = 'https://github.com/nvim-mini/mini.diff' },
-  { src = 'https://github.com/stevearc/oil.nvim' },
   { src = 'https://github.com/nvim-mini/mini.statusline' },
-  { src = 'https://github.com/neovim/nvim-lspconfig' },
+  { src = 'https://github.com/stevearc/oil.nvim' },
+  { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
 }
 
 require("oil").setup({
@@ -34,6 +35,9 @@ require("oil").setup({
     "permissions",
     -- "size",
     -- "mtime",
+  },
+  float = {
+	  padding = 5,
   },
 })
 
