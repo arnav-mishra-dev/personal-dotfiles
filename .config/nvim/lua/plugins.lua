@@ -27,6 +27,7 @@ vim.pack.add{
   { src = 'https://github.com/nvim-mini/mini.statusline' },
   { src = 'https://github.com/stevearc/oil.nvim' },
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+  { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
 }
 
 require("oil").setup({
