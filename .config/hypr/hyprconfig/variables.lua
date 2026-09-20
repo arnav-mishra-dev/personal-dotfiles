@@ -2,11 +2,11 @@
 ---- MY PROGRAMS ----
 ---------------------
 
-local terminal = "foot"
+local terminal = "ghostty"
 -- Set programs that you use
 local vars = {
   terminal    = terminal,
-  fileManager = terminal .. " bash -ic yazi",
+  fileManager = terminal .. " -e yazi",
   menu        = "fuzzel",
   browser     = "brave"
 }

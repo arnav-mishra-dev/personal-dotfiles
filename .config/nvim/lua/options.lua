@@ -1,10 +1,6 @@
 -- Enable faster startup by caching compiled Lua modules
 vim.loader.enable()
 
-if vim.g.neovide then
-    vim.o.guifont = "JetBrainsMono NF:h14"
-end
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
