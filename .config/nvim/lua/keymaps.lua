@@ -18,13 +18,6 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {
   desc = 'Open diagnostic message'
 })
 
-vim.keymap.set('n', '<leader>t',
-  function()
-	vim.fn.jobstart('ghostty', { cwd = vim.fn.getcwd() })
-    end, {
-    desc = 'Open diagnostic message'
-})
-
 MiniPick.registry.files_fd = function()
   local command = { 'fd', '--type=f', '--no-follow', '--color=never', '--hidden' }
   local show_with_icons = function(buf_id, items, query)
