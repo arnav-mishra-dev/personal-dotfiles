@@ -1,5 +1,5 @@
 theme = oxocarbon.conf
-custom-shader = shaders/cursor_smear.glsl
+custom-shader = shaders/cursor.glsl
 
 font-family = JetBrainsMono NF
 font-size = 14
